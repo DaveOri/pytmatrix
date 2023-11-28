@@ -13,7 +13,7 @@ requires = [
 [project]
 name = "mesonpytmatrix"
 license = {file = "LICENSE"}
-version = "0.3.4" # TODO last pytmatrix was 0.3.3
+version = "0.3.5" # TODO last pytmatrix was 0.3.3
 description = "T-matrix scattering computations"
 long_description = "A Python code for computing the scattering properties of homogeneous nonspherical scatterers with the T-Matrix method - now build with meson ;)"
 authors = [{name = "Jussi Leinonen", email = "jsleinonen@gmail.com"}]
