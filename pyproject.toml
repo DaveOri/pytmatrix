@@ -1,0 +1,72 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = [
+         "wheel",
+         "meson-python>=0.8.0",
+         "setuptools<60.0",  # Do not increase, 60.0 enables vendored distutils
+         "Cython>=0.29.21",
+         "python-dev-tools",
+         "oldest-supported-numpy; python_version>'3.9'",
+         "numpy; python_version<='3.9'"
+]
+
+[project]
+name = "mesonpytmatrix"
+license = {file = "LICENSE"}
+version = "0.3.4" # TODO last pytmatrix was 0.3.3
+description = "T-matrix scattering computations"
+long_description = "A Python code for computing the scattering properties of homogeneous nonspherical scatterers with the T-Matrix method - now build with meson ;)"
+authors = [{name = "Jussi Leinonen", email = "jsleinonen@gmail.com"}]
+maintainers = [
+    {name = "Jussi Leinonen", email = "jsleinonen@gmail.com"},
+    {name = "Davide Ori", email = "davide.ori87@gmail.com"},
+]
+requires-python = ">=3.7"
+dependencies = [
+    # TODO: update to "pin-compatible" once possible, see
+    # https://github.com/FFY00/meson-python/issues/29
+    "numpy>=1.19.5", ## DO: copied from apexpy, not sure if it is still relevant
+    "scipy",
+]
+readme = "README.md"
+keywords = [
+         "scattering",
+         "spheroids",
+         "T-matrix",
+         "weather radar",
+]
+classifiers = [
+    "Development Status :: 4 - Beta", # TODO maybe switch to 5 Production/Stable
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Fortran",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Utilities",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+# dynamic = ['version']
+
+[project.optional-dependencies]
+test = [
+  "unittest",
+  ]
+#doc = ["sphinx>=1.3", "sphinx-rtd-theme"]
+
+[project.urls]
+source = 'https://github.com/jleinonen/pytmatrix'
+documentation = "https://github.com/jleinonen/pytmatrix/wiki"
+tracker = "https://github.com/jleinonen/pytmatrix/issues"
+download = "https://github.com/jleinonen/pytmatrix/releases"
+
