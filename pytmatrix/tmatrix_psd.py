@@ -20,10 +20,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 import warnings
-from pytmatrix.tmatrix import Scatterer
-from pytmatrix.psd import PSDIntegrator, GammaPSD, BinnedPSD
-import pytmatrix.tmatrix_aux as tmatrix_aux
-
+from mesonpytmatrix.tmatrix import Scatterer
+from mesonpytmatrix.psd import PSDIntegrator, GammaPSD, BinnedPSD
+import mesonpytmatrix.tmatrix_aux as tmatrix_aux
+# from pytmatrix.tmatrix import Scatterer
+# from pytmatrix.psd import PSDIntegrator, GammaPSD, BinnedPSD
+# import pytmatrix.tmatrix_aux as tmatrix_aux
 
 class TMatrixPSD(Scatterer):
     """T-matrix class to perform computations over PSDs.

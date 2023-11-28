@@ -21,14 +21,23 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import unittest
 import numpy as np
-from pytmatrix.tmatrix import TMatrix, Scatterer
-from pytmatrix.tmatrix_psd import TMatrixPSD
-from pytmatrix import orientation
-from pytmatrix import radar
-from pytmatrix import refractive
-from pytmatrix import tmatrix_aux
-from pytmatrix import psd
-from pytmatrix import scatter
+from mesonpytmatrix.tmatrix import TMatrix, Scatterer
+from mesonpytmatrix.tmatrix_psd import TMatrixPSD
+from mesonpytmatrix import orientation
+from mesonpytmatrix import radar
+from mesonpytmatrix import refractive
+from mesonpytmatrix import tmatrix_aux
+from mesonpytmatrix import psd
+from mesonpytmatrix import scatter
+
+# from pytmatrix.tmatrix import TMatrix, Scatterer
+# from pytmatrix.tmatrix_psd import TMatrixPSD
+# from pytmatrix import orientation
+# from pytmatrix import radar
+# from pytmatrix import refractive
+# from pytmatrix import tmatrix_aux
+# from pytmatrix import psd
+# from pytmatrix import scatter
 
 
 #some allowance for rounding errors etc

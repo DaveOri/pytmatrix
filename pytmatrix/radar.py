@@ -21,7 +21,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 import numpy as np
-from pytmatrix.scatter import ldr, ext_xsect
+from mesonpytmatrix.scatter import ldr, ext_xsect
+# from pytmatrix.scatter import ldr, ext_xsect
 
 
 def radar_xsect(scatterer, h_pol=True):

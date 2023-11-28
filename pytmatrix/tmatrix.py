@@ -22,9 +22,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import warnings
 import numpy as np
-from pytmatrix.fortran_tm import pytmatrix
-from pytmatrix.quadrature import quadrature
-import pytmatrix.orientation as orientation
+from mesonpytmatrix.fortran_tm import ftmatrix
+# from pytmatrix.fortran_tm import pytmatrix
+from mesonpytmatrix.quadrature import quadrature
+# from pytmatrix.quadrature import quadrature
+import mesonpytmatrix.orientation as orientation
+#import pytmatrix.orientation as orientation
 
 
 class Scatterer(object):
@@ -211,9 +214,12 @@ class Scatterer(object):
             radius_type = self.radius_type
             radius = self.radius
 
-        self.nmax = pytmatrix.calctmat(radius, radius_type,
+        self.nmax = ftmatrix.calctmat(radius, radius_type,
             self.wavelength, self.m.real, self.m.imag, self.axis_ratio,
             self.shape, self.ddelt, self.ndgs)
+        #self.nmax = pytmatrix.calctmat(radius, radius_type,
+        #    self.wavelength, self.m.real, self.m.imag, self.axis_ratio,
+        #    self.shape, self.ddelt, self.ndgs)
         self._tm_signature = (self.radius, self.radius_type, self.wavelength,
             self.m, self.axis_ratio, self.shape, self.ddelt, self.ndgs)        
 
@@ -279,9 +285,12 @@ class Scatterer(object):
         outdated = tm_outdated or scatter_outdated
 
         if outdated:
-            (self._S_single, self._Z_single) = pytmatrix.calcampl(self.nmax, 
+            (self._S_single, self._Z_single) = ftmatrix.calcampl(self.nmax, 
                 self.wavelength, self.thet0, self.thet, self.phi0, self.phi, 
                 alpha, beta)
+            #(self._S_single, self._Z_single) = pytmatrix.calcampl(self.nmax,
+            #    self.wavelength, self.thet0, self.thet, self.phi0, self.phi,
+            #    alpha, beta)
             self._set_scatter_signature()
 
         return (self._S_single, self._Z_single)
