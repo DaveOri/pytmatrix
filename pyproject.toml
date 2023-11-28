@@ -6,14 +6,14 @@ requires = [
 #         "setuptools<60.0",  # Do not increase, 60.0 enables vendored distutils
          "Cython",#>=0.29.21",
          "python-dev-tools",
-         "oldest-supported-numpy; python_version>'3.9'",
-         "numpy; python_version<='3.9'"
+#         "oldest-supported-numpy; python_version>'3.9'",
+         "numpy",#; python_version<='3.9'"
 ]
 
 [project]
 name = "mesonpytmatrix"
 license = {file = "LICENSE"}
-version = "0.3.6" # TODO last pytmatrix was 0.3.3
+version = "0.3.7" # TODO last pytmatrix was 0.3.3
 description = "T-matrix scattering computations"
 long_description = "A Python code for computing the scattering properties of homogeneous nonspherical scatterers with the T-Matrix method - now build with meson ;)"
 authors = [{name = "Jussi Leinonen", email = "jsleinonen@gmail.com"}]
