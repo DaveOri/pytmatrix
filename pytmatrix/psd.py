@@ -27,7 +27,10 @@ except ImportError:
     import pickle
 import warnings
 import numpy as np
-from scipy.integrate import trapz
+try:
+    from scipy.integrate import trapz
+except ImportError: # trapz has been removed from scipy>=1.14
+    from scipy.integrate import trapezoid as trapz
 from scipy.special import gamma
 import mesonpytmatrix.scatter as scatter
 import mesonpytmatrix.tmatrix_aux as tmatrix_aux
