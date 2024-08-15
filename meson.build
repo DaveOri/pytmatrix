@@ -1,6 +1,6 @@
 project( 'mesonpytmatrix', 'c',
   # Note that the git commit hash cannot be added dynamically here
-  version: '0.3.4', # TODO Is this repeated in pyproject.toml ????
+  version: '0.3.8', # TODO Is this repeated in pyproject.toml ????
   license: 'MIT',
   meson_version: '>= 0.63.0',
   default_options: [
